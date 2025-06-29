@@ -6,14 +6,13 @@
 #define NAVIO 3        // valor que representa parte de um navio
 #define HABILIDADE 5   // valor que representa área afetada
 
-// Inicia o tabuleiro
+
 void inicializarTabuleiro(int tabuleiro[TAB][TAB]) {
     for (int i = 0; i < TAB; i++)
         for (int j = 0; j < TAB; j++)
             tabuleiro[i][j] = 0;
 }
 
-// Mostra o tabuleiro
 void imprimirTabuleiro(int tabuleiro[TAB][TAB]) {
     printf("\nTabuleiro:\n");
     for (int i = 0; i < TAB; i++) {
@@ -24,7 +23,6 @@ void imprimirTabuleiro(int tabuleiro[TAB][TAB]) {
     }
 }
 
-// posiciona os navios fixos
 void posicionarNavios(int tabuleiro[TAB][TAB]) {
     // Horizontal
     for (int i = 0; i < 3; i++) tabuleiro[1][1 + i] = NAVIO;
